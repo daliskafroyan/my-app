@@ -1,15 +1,21 @@
+/// <reference path='./provider.d.ts' />
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {MatoaProvider} from '@matoa-ui/components'
+// import { AksaraProvider } from '@aksara-ui/react';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+      <MatoaProvider>
+        <App />
+    </MatoaProvider>
   </React.StrictMode>
 );
 
